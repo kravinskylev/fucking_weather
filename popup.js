@@ -21,6 +21,7 @@ jQuery(document).ready(function($) {
      document.getElementById('para').innerHTML = "WTF is going on outside?"
   }
   document.getElementById('loc').innerHTML = location;
+
   document.getElementById("loc").style.color = "#515151";
 
   }
