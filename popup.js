@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
   document.getElementById('loc').innerHTML = location;
 
   document.getElementById("loc").style.color = "#515151";
-
   }
-  });
+
+});
 });
