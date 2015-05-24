@@ -4,7 +4,7 @@
   "name": "True Weather",
   "description": "This extension is the unofficial web version of Authentic Weather.",
   "version": "1.0",
-  "content_security_policy": "script-src 'self' https://api.wunderground.com/api/; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://api.wunderground.com/api/ https://ipinfo.io; object-src 'self'",
   "chrome_url_overrides": {
     "newtab": "popup.html"
   },
@@ -24,7 +24,7 @@
     "permissions": [
       "activeTab",
       "https://ajax.googleapis.com/",
-      "https://api.wunderground.com/api/45bc33d3467bf2dc/geolookup/conditions/q/CO/…ver.json?callback=jQuery21406278262936975807_1432336481949&_=1432336481950",
+      "https://api.wunderground.com/api/",
       "https://ipinfo.io"
     ],
 
