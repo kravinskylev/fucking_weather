@@ -1,6 +1,14 @@
+$.get("http://ipinfo.io", function(response) {
+    document.getElementById('city').innerHTML = (response.ip, response.city);
+}, "jsonp");
+
+$.get("http://ipinfo.io", function(response) {
+    document.getElementById('region').innerHTML = (response.ip, response.region);
+}, "jsonp");
+
 jQuery(document).ready(function($) {
   $.ajax({
-  url : "https://api.wunderground.com/api/45bc33d3467bf2dc/geolookup/conditions/q/CO/Denver.json",
+  url : "https://api.wunderground.com/api/45bc33d3467bf2dc/geolookup/conditions/q/19046.json",
   dataType : "jsonp",
   success : function(parsed_json) {
   var city = parsed_json['location']['city'];
@@ -14,15 +22,15 @@ jQuery(document).ready(function($) {
   } else if (x.includes("overcast")) {
      document.getElementById('para').innerHTML = "Fifty fucking shades of grey."
   } else if (x.includes("rain")) {
-     document.getElementById('para').innerHTML = "Cloudy with a chance of bullshit"
+     document.getElementById('para').innerHTML = "Its fucking raining."
   } else if (x.includes("clear")) {
      document.getElementById('para').innerHTML = "Suns out, get naked. Is that right?"
   } else {
      document.getElementById('para').innerHTML = "WTF is going on outside?"
   }
-  document.getElementById('loc').innerHTML = location;
-
-  document.getElementById("loc").style.color = "#515151";
+  // document.getElementById('loc').innerHTML = location;
+  //
+  // document.getElementById("loc").style.color = "#515151";
   }
 
 });
