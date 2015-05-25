@@ -74,7 +74,7 @@ function abbrState(input, to){
 
 jQuery(document).ready(function($) {
 
-  $.get("http://ipinfo.io", function(response) {
+  $.get("https://ipinfo.io?token=2855c965e609d1", function(response) {
       state = (response.ip, response.region);
       abbr  = abbrState('' + state, 'abbr');
       city  = (response.ip, response.city);
@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
       } else {
          document.getElementById('para').innerHTML = "WTF is going on outside?"
       }
-      document.getElementById('loc').innerHTML = city + ", " + abbr; 
+      document.getElementById('loc').innerHTML = city + ", " + abbr;
       }
     });
   }, "jsonp");
