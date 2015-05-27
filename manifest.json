@@ -3,7 +3,7 @@
 
   "name": "True Weather",
   "description": "This extension is the unofficial web version of Authentic Weather.",
-  "version": "1.3",
+  "version": "1.4",
   "content_security_policy": "script-src 'self' https://api.wunderground.com/api/ https://ipinfo.io/?token=2855c965e609d1; object-src 'self'",
   "chrome_url_overrides": {
     "newtab": "popup.html"
@@ -11,15 +11,8 @@
 
   "browser_action": {
     "default_icon": "cloud.png",
-    "default_popup": "popup.html",
     "default_title": "What's the fucking weather?!"
   },
-
-  "content_scripts": [ {
-     "js": [ "jquery-2.1.4.js", "popup.js" ],
-     "css": ["styles.css"],
-     "matches": [ "http://*/*", "https://*/*"]
-   }],
 
     "permissions": [
       "activeTab",
@@ -28,6 +21,6 @@
       "https://ipinfo.io/*"
     ],
 
-    "background": { "scripts": ["jquery-2.1.4.js", "popup.js"], "pages": ["popup.html"] }
+    "background": { "scripts": ["jquery-2.1.4.js", "popup.js"], "persistent": false, "pages": ["popup.html"], "persistent": false }
 
 }
