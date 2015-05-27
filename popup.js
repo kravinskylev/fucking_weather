@@ -104,4 +104,8 @@ jQuery(document).ready(function($) {
       }
     });
   }, "jsonp");
+
+  var colors = ['#77DD77', '#779ECB', '#F49AC2', '#CB99C9'];
+  var random_color = colors[Math.floor(Math.random() * (colors.length))];
+  $('html, body').css('background-color', random_color);
 });
