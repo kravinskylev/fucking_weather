@@ -18,8 +18,9 @@
       "activeTab",
       "https://ajax.googleapis.com/*",
       "https://api.wunderground.com/api/*",
-      "https://ipinfo.io/*"
-    ],
+      "https://ipinfo.io/*",
+      "geolocation"
+      ],
 
     "background": { "scripts": ["jquery-2.1.4.js", "popup.js"], "persistent": false, "pages": ["popup.html"], "persistent": false }
 

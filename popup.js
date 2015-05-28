@@ -1,3 +1,17 @@
+var x = document.getElementById("out");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+// need to add function callback for error so I can have descriptive errors in CDT
+
 function abbrState(input, to){
 
     var states = [
@@ -71,6 +85,7 @@ function abbrState(input, to){
         }
     }
 }
+
 
 jQuery(document).ready(function($) {
 
